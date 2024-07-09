@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Background with Transparent Video and Modal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/font.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* Prevent scrollbars */
+            position: relative;
+            /* Ensure absolute positioning works correctly */
+        }
+
+        .dark-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent black overlay */
+            z-index: 1;
+            /* Place overlay above normal content */
+        }
+
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 60;
+            /* Behind overlay and other content */
+        }
+
+        .video-container video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            mix-blend-mode: screen;
+            /* Blend mode to make black background transparent */
+            opacity: 0.3;
+            /* Adjust opacity of video */
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            /* Place content above video */
+            text-align: center;
+            color: #fff;
+            /* Adjust text color for visibility */
+            padding: 20px;
+        }
+
+        iframe {
+            height: 100vh;
+            width: 100vw;
+        }
+
+
+
+
+        /* Adjust Modal for Small Screens */
+        @media (max-width:768px) {
+            .modal-content {
+                width: 80vw;
+
+            }
+        }
+
+        @media screen and (min-width:769px) {
+            .modal-content {
+                max-width: 20rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Dark Overlay -->
+    <div class="dark-overlay"></div>
+
+    <!-- Video Container -->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="videos/spotlight.mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-dialog justify-content-center">
+            <div class="modal-content">
+                <div class="modal-body text-center pb-0 pt-4">
+                    <h6 class="text-primary fw-bold pb-3" style="font-size:1.2rem;">Flight operations resumed</h6>
+                    <p class="text-muted pb-3 mb-2" style="font-size:0.9rem;">We're excited to welcome you <br>back
+                        aboard our capsuules</p>
+
+                </div>
+                <div class="px-5 pb-4">
+                    <button type="button" class="btn rounded-pill submitbtn w-100"
+                        style="background-color: orange; border: none;font-size:0.9rem;"
+                        id="continueBtn">Continue</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Script to Open Modal on Page Load -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+                backdrop: 'static',
+                keyboard: false
+            });
+            myModal.show();
+
+            var continueBtn = document.getElementById('continueBtn');
+            if (continueBtn) {
+                continueBtn.addEventListener('click', function () {
+                    // Redirect to the desired page
+                    window.location.href = 'homepage.html';
+                });
+            }
+        });
+    </script>
+
+    <!-- Content Goes Here -->
+    <div class="content p-0 m-0">
+        <iframe src="homepage.html" frameborder="0"></iframe>
+    </div>
+
+</body>
+
+</html>

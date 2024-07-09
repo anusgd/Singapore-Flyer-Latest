@@ -1,0 +1,30 @@
+.offcanvascomp {
+    color: #FEBE10;
+    padding: 0.125rem;
+    width: 2.5rem;
+}
+
+.circle-button {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    border: none;
+    background: #0066b2;
+    cursor: pointer;
+}
+
+/* Custom offcanvas style for smaller width */
+.offcanvas-end.custom-offcanvas {
+    width: 9.375rem !important;
+    /* Adjust width as needed */
+}
+
+.offcanvas-bottom {
+    height: auto !important;
+    max-height: 100% !important;
+}
+.btmpanelbtn {
+    background: white;
+    border: 0;
+    outline: 0;
+}

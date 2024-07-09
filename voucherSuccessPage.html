@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/font.css">
+    <style>
+        .custom-btn {
+            border-radius: 25px;
+            background-color: #e28848;
+            border: none;
+        }
+
+        .custom-btn:hover,
+        .custom-btn:focus,
+        .custom-btn:active {
+            background-color: #eca572;
+            border: #000;
+            outline: none;
+            /* Remove default outline */
+            box-shadow: none;
+            /* Remove default box-shadow */
+        }
+
+        .gifsmiley {
+            width: 8rem !important;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="d-flex flex-column align-items-center">
+            <img src="images/check.gif" class="gifsmiley" alt="">
+            <h5 class="fw-bold text-primary">Voucher redeemed successfully!</h5>
+            <p id="datetime" class="text-muted" style="font-size:0.7rem;">We appreciate your feedback <br>and hope to
+                see you again</p>
+        </div>
+    </div>
+
+    <div class="fixed-bottom bg-white p-2 ">
+        <div class="d-grid gap-2 col-10 col-sm-6 col-md-4 mx-auto">
+            <button type="button" onclick="goToPage('homepage.html')"
+                class="btn btn-secondary custom-btn text-nowrap">Back to Home</button>
+        </div>
+    </div>
+
+    <script>
+        function goToPage(url) {
+            window.location.href = url;
+        }
+    </script>
+    <script>
+        function displayDateTime() {
+            // Create a new Date object
+            var now = new Date();
+
+            // Get date components
+            var date = now.toLocaleDateString(); // Format: MM/DD/YYYY
+            var time = now.toLocaleTimeString(); // Format: HH:MM:SS AM/PM
+
+            // Display date and time in a specific element
+            document.getElementById('datetime').textContent = date + ' ' + time;
+        }
+
+        // Call the function initially to display current date and time
+        displayDateTime();
+
+    </script>
+
+</body>
+
+</html>

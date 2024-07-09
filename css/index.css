@@ -1,0 +1,104 @@
+
+
+
+body {
+  font-family:'Poppins',sans-serif;
+  background: url('../images/singaporeFlyerPhone.jpg') center fixed no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+}
+
+
+.language-options {
+  
+  display: inline-block;
+  border: 2px solid #ddd;
+  background-color:#333;
+  /* Grey border */
+  border-radius: 50px;
+  /* Adjust based on your preference */
+  padding: 5px;
+  /* Space between border and symbols */
+  max-width: fit-content;
+
+}
+
+.language-option {
+  display: inline-block;
+  width: 25px;
+  /* Smaller width */
+  height: 25px;
+  /* Smaller height */
+  margin-right: 5px;
+  /* Reduced margin */
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  line-height: 25px;
+  /* Center align text vertically */
+  border: 2px solid transparent;
+  /* Transparent border initially */
+  color:#fff;
+}
+
+.language-option.active {
+  border-color: #000;
+  background-color:#fff;
+  color:#000;
+  /* Bootstrap primary color for active state */
+}
+
+
+.custom-btn{
+  border-radius:25px;
+  background-color:#e28848;
+  border:none;
+}
+.custom-btn:hover,
+.custom-btn:focus,
+.custom-btn:active
+ {
+  background-color:#eca572;
+  border:#000;
+  outline: none; /* Remove default outline */
+  box-shadow: none; /* Remove default box-shadow */
+}
+.custom-btn-1{
+  border-radius:25px;
+  background-color:transparent;
+  border:1.5px solid #ddd;
+}
+.custom-btn-1:hover,
+.custom-btn-1:focus,
+.custom-btn-1:active
+ {
+  color:#222;
+  background-color:#ddd;
+  border:1.5px solid #ddd;
+  outline: none; /* Remove default outline */
+  box-shadow: none; /* Remove default box-shadow */
+}
+
+
+
+.footer {
+  position: sticky;
+  bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+      background: url('../images/singaporeFlyerLaptop.jpg') center fixed no-repeat;
+      background-size: cover;
+  }
+  .custom-btn-1,.custom-btn-1:hover{
+    border-width:2px;
+  }
+}
+

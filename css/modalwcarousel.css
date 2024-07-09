@@ -1,0 +1,36 @@
+.carousel-indicators button {
+    width: 7px !important;
+    height: 7px !important;
+    border-radius: 100%;
+    border: none;
+    background-color: gray;
+}
+
+.carousel-indicators button.active {
+    border-radius: 100px !important;
+    width: 20px !important;
+    height: 7px !important;
+    background: white;
+}
+
+.bg-for-carouselbtn {
+    background-color: rgb(210, 210, 210);
+}
+
+.width-ofbtn {
+    width: 1rem !important;
+    height: 1rem !important;
+
+}
+
+.opacity-ofbtn {
+    opacity: 0.8 !important;
+}
+
+.carousel-item {
+    transition: transform 0.5s ease, opacity 1s ease !important;
+}
+
+.level-heading-transition {
+    transition: transform 0.1s ease !important;
+}

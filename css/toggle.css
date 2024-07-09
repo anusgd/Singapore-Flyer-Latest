@@ -1,0 +1,91 @@
+.cloud-icon {
+  height: 2.25rem;
+}
+
+.toppanel {
+  max-width: 25rem;
+}
+
+.firstTdRightBorder {
+  border-right: 1px solid #ccc;
+}
+
+table {
+  border-collapse: separate;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.icon-text {
+  font-size: 0.75rem;
+}
+
+.icon-text i {
+  font-size: 0.4rem;
+  background-color: transparent;
+  color: chartreuse;
+  margin-right: 0.25rem;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
+}
+.language-options {
+    max-height:2.5rem;
+    text-wrap: nowrap;
+    display: inline-block;
+    border: 2px solid #ddd;
+    background-color:#333;
+    /* Grey border */
+    border-radius: 50px;
+    /* Adjust based on your preference */
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    /* Space between border and symbols */
+    max-width: fit-content;
+    font-size:0.9rem;
+  
+  }
+  
+  .language-option {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 25px;
+    /* Center align text vertically */
+    border: 2px solid transparent;
+    /* Transparent border initially */
+    color:#fff;
+  }
+  
+  .language-option.active {
+    border-color: #000;
+    background-color:#fff;
+    color:#000;
+    /* Bootstrap primary color for active state */
+  }
+  
+  
+  .custom-btn{
+    border-radius:25px;
+    background-color:#e28848;
+    border:none;
+  }
+  .custom-btn:hover,
+  .custom-btn:focus,
+  .custom-btn:active
+   {
+    background-color:#eca572;
+    border:#000;
+    outline: none; /* Remove default outline */
+    box-shadow: none; /* Remove default box-shadow */
+  }
+  
+    @media screen and (max-width:576px){
+      .font-for-offcanvas{
+        font-size:1.2rem;
+      }
+    }
+  

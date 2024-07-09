@@ -1,0 +1,29 @@
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.form-control {
+    padding-left: 40px;
+    /* Adjust padding for icon and text spacing */
+    border-radius: 20px !important;
+    /* Rounded corners */
+}
+
+.input-group .form-control:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: #ced4da;
+}
+
+.form-control-icon {
+    position: absolute;
+    left: 12px;
+    /* Adjust icon left spacing */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Ensure icon doesn't interfere with input */
+    z-index: 10;
+    /* Ensure icon is above input field */
+}

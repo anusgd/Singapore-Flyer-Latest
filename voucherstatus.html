@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/4ffc3dc033.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/font.css">
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .half-card {
+            width: 92vw;
+            height: 5rem;
+            max-width: 400px;
+            /* Adjust width as needed */
+            position: absolute;
+            top: calc(25vh - 2.5rem) !important;
+            /* Adjust based on card's height */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .first-div,
+        .second-div {
+            max-width: 500px;
+
+        }
+
+        .first-div {
+            margin-bottom: 2.5rem;
+        }
+
+        .second-div {
+            padding-top: 2.5rem;
+        }
+
+        .fixed-bottom-wrapper {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            z-index: 2000;
+            /* Ensure this is higher than the dropdown menu's z-index */
+            background-color: white;
+            box-shadow: inset 0px 5px 8px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .custom-btn {
+            border-radius: 25px;
+            background-color: #e28848;
+            border: none;
+        }
+
+        .custom-btn:hover,
+        .custom-btn:focus,
+        .custom-btn:active {
+            background-color: #eca572;
+            border: #000;
+            outline: none;
+            /* Remove default outline */
+            box-shadow: none;
+            /* Remove default box-shadow */
+        }
+
+        @media screen and (max-width:576px) {
+            .second-div {
+                padding-left: 0;
+                padding-right: 0;
+                margin-left: 0;
+                margin-right: 0;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="height:25vh; background-color:#1B3C73; position:relative;">
+        <div class="container first-div d-flex align-items-center ps-3" style="height:25vh">
+
+            <div>
+                <h4 class="text-white">Sky View Pavilion</h4>
+                <p class="text-white ">30 Raffles Ave, #01-04, Singapore 039803</p>
+            </div>
+
+        </div>
+
+
+        <div class="card half-card">
+            <div class="card-body d-flex justify-content-center align-items-center py-2">
+                <div class="d-flex">
+                    <span class="text-center px-2 bg-dark p-1 fs-6" style="border-radius:50%;"><i
+                            class="fa-solid fa-ticket-simple" style="color:#f0c57a"></i></span>
+
+                </div>
+                <div class="flex-fill ps-3">
+                    <p class="mb-0" style="font-size:0.9rem;">Number of vouchers scanned today</p>
+                    <p class="fw-bold mb-0" style="font-size: 1.1rem;">88</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="second-div container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h5 class="text-primary fw-bold mb-0 pt-1 ps-3">History</h5>
+        </div>
+        <div class="d-flex justify-content-between align-items-center pt-3 px-3">
+            <div class="d-flex flex-column">
+                <h6 class="text-dark fw-bold mb-0" style="font-size:0.9rem;">30 April 2024, 11:15am</h6>
+                <p class="text-muted mb-0" style="font-size:0.7rem;">Transaction ID: 0003</p>
+            </div>
+            <span class="badge bg-success">REDEEMED</span>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between align-items-center px-3">
+            <div class="d-flex flex-column">
+                <h6 class="text-dark fw-bold mb-0" style="font-size:0.9rem;">30 April 2024, 11:15am</h6>
+                <p class="text-muted mb-0" style="font-size:0.7rem;">Transaction ID: 0003</p>
+            </div>
+            <span class="badge bg-danger">INVALID</span>
+        </div>
+        <hr>
+
+    </div>
+
+
+
+    <div class="fixed-bottom-wrapper p-2">
+        <div class="d-grid gap-2 col-10 col-sm-3 mx-auto">
+            <button type="button" onclick="goToPage('voucherSuccessPage.html')" class="btn custom-btn text-nowrap pt-2">
+
+                <i class="fa-solid fa-camera fs-5"></i>
+                <span class="ms-1">
+                    Scan QR
+                </span>
+
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function goToPage(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>

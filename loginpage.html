@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/font.css">
+
+    <style>
+        .full-height {
+            height: 100vh;
+        }
+
+        .welcome-text {
+            font-size: 1.5rem;
+        }
+
+        .forgot-password {
+            font-size: 0.75rem;
+        }
+
+        .submit-btn {
+            background-color: orange;
+            border-radius: 30px;
+        }
+
+        .login-page {
+            padding-top: 20vh;
+        }
+
+        .submit-btn {
+            margin-top: 2vh;
+        }
+
+
+
+        @media screen and (min-width:768px) {
+            .login-page {
+                padding-top: 10vh;
+            }
+
+            .submit-btn {
+                margin-top: 5vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container vh-100 d-flex flex-column align-items-start align-items-md-center login-page">
+
+        <div class="d-grid col-5 col-lg-2 ps-0 align-self-start align-self-md-center">
+            <img src="images/sg-flyer-logo-v2.jpg" alt="Singapore Flyer Logo" class="img-fluid">
+        </div>
+
+        <div class=" mb-4 d-grid ps-2 col-lg-4">
+            <div class="welcome-text fw-bold">Welcome to</div>
+            <div class="welcome-text text-nowrap fw-bold">Retail Merchant App</div>
+        </div>
+        <div class="d-grid mx-auto col-12 col-md-7 col-lg-4">
+            <form>
+                <div class="mb-3 ">
+                    <input type="text" class="form-control bg-light border-0 shadow-none" placeholder="Username"
+                        required>
+                </div>
+                <div class="mb-5 position-relative">
+                    <input type="password" class="form-control bg-light border-0 shadow-none" placeholder="Password"
+                        required>
+                    <div class="position-absolute end-0 top-100 mt-1 me-2">
+                        <a href="#" class="text-muted forgot-password">Forgot Password?</a>
+                    </div>
+                </div>
+                <div class="d-grid submit-button ">
+                    <button type="submit" class="btn submit-btn w-75 border-0 shadow-none mx-auto"
+                        onclick="goToPage('voucherstatus.html')">Sign in</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+    <script>
+        function goToPage(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>
