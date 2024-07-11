@@ -1,9 +1,33 @@
 .cloud-icon {
   height: 2.25rem;
+  width:2.25rem;
+  border-radius: :100%;
 }
 
-.toppanel {
-  max-width: 25rem;
+html,
+body {
+      box-sizing: border-box;
+}
+
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  /* Diameter of the circle */
+  height: 2rem;
+  /* Diameter of the circle */
+  border-radius: 50%;
+  /* Makes the container a circle */
+  background-color: #000;
+  /* Background color of the circle */
+}
+
+.icon-circle i {
+  font-size: 1rem;
+ 
+  padding: 0.125rem 0;
+  /* 3px padding on top and bottom */
 }
 
 .firstTdRightBorder {
@@ -17,39 +41,37 @@ table {
   background-color: #fff;
 }
 
-.icon-text {
-  font-size: 0.75rem;
-}
+
 
 .icon-text i {
-  font-size: 0.4rem;
+  font-size: 0.3rem;
   background-color: transparent;
   color: chartreuse;
   margin-right: 0.25rem;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
 }
 .language-options {
-    max-height:2.5rem;
+   
     text-wrap: nowrap;
-    display: inline-block;
+   
     border: 2px solid #ddd;
     background-color:#333;
     /* Grey border */
     border-radius: 50px;
     /* Adjust based on your preference */
-    padding: 2px;
+   
     padding-left: 4px;
     padding-right: 4px;
     /* Space between border and symbols */
-    max-width: fit-content;
-    font-size:0.9rem;
+    
+    font-size:0.7rem;
   
   }
   
   .language-option {
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
     cursor: pointer;
     text-align: center;

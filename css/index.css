@@ -15,44 +15,7 @@ body {
 }
 
 
-.language-options {
-  
-  display: inline-block;
-  border: 2px solid #ddd;
-  background-color:#333;
-  /* Grey border */
-  border-radius: 50px;
-  /* Adjust based on your preference */
-  padding: 5px;
-  /* Space between border and symbols */
-  max-width: fit-content;
 
-}
-
-.language-option {
-  display: inline-block;
-  width: 25px;
-  /* Smaller width */
-  height: 25px;
-  /* Smaller height */
-  margin-right: 5px;
-  /* Reduced margin */
-  border-radius: 50%;
-  cursor: pointer;
-  text-align: center;
-  line-height: 25px;
-  /* Center align text vertically */
-  border: 2px solid transparent;
-  /* Transparent border initially */
-  color:#fff;
-}
-
-.language-option.active {
-  border-color: #000;
-  background-color:#fff;
-  color:#000;
-  /* Bootstrap primary color for active state */
-}
 
 
 .custom-btn{
