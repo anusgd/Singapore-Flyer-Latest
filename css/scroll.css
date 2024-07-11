@@ -67,11 +67,11 @@
             font-size:0.9rem;
             overflow:hidden !important;
             text-overflow:ellipsis !important;
+            
         }
         .card-body div{
             font-size:0.68rem;
-            overflow:hidden !important;
-            text-overflow:ellipsis !important;
+            
 
         }
 
