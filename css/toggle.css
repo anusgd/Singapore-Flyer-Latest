@@ -24,7 +24,7 @@ body {
 }
 
 .icon-circle i {
-  font-size: 1rem;
+  
  
   padding: 0.125rem 0;
   /* 3px padding on top and bottom */
@@ -64,7 +64,7 @@ table {
     padding-right: 4px;
     /* Space between border and symbols */
     
-    font-size:0.7rem;
+
   
   }
   
