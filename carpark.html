@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/toggle.css">
     <link rel="stylesheet" href="css/offcanvas.css">
     <link rel="stylesheet" href="css/modalwcarousel.css">
+    <link rel="stylesheet" href="css/imgForTopPanel.css">
     <style>
         .btmpanelbtn {
             background: white;
@@ -50,10 +51,10 @@
     <div class="pb-5">
         <div class="sticky-top bg-light">
             <div class="container">
-                <!--toppanel-->
+
                 <!--toppanel-->
                 <div class="toppanel d-grid col-12 col-md-6 col-lg-7 col-xl-4  mx-auto  me-sm-0 p-0 sticky-top">
-                    <table class="float-end mt-3 ">
+                    <table class="float-end mt-3 mb-2 ">
                         <tr>
                             <td class="first-td firstTdRightBorder" style="width:50%">
                                 <div class="d-flex px-3 py-2 align-items-center justify-content-center">
@@ -76,7 +77,8 @@
                                     class="d-flex px-3 py-2 align-items-center justify-content-between justify-content-sm-center gap-sm-2 ">
                                     <div class="d-flex flex-column ">
                                         <div style="font-size: 0.7rem;">Queue Status</div>
-                                        <img style="height: 1rem;" src="icons/icons/status-amber.png" alt="">
+                                        <div class="status-image-wrapper"> <img class="status-image"
+                                                src="../icons/icons/status-amber.png" alt=""></div>
                                     </div>
 
                                     <div class="language-options d-flex flex-row  p-1">
@@ -207,7 +209,8 @@
 
                     <div class="col-4 col-md-12 div-org">
                         <div class="d-flex flex-column justify-content-center align-items-center">
-                            <button class="circle-button d-flex justify-content-center align-items-center">
+                            <button type="button" onclick="goToPage('carpark.html')"
+                                class="circle-button d-flex justify-content-center align-items-center">
                                 <i class="fa-solid fa-car offcanvascomp"></i>
                             </button>
                             <p class="text-center" style="font-size: 0.7rem;">Carpark</p>
@@ -216,7 +219,8 @@
 
                     <div class="col-4 col-md-12 div-org">
                         <div class="d-flex flex-column justify-content-center align-items-center">
-                            <button class="circle-button d-flex justify-content-center align-items-center">
+                            <button type="button" onclick="goToPage('feedbacknew.html')"
+                                class="circle-button d-flex justify-content-center align-items-center">
                                 <i class="fa-solid fa-comments offcanvascomp"></i>
                             </button>
                             <p class="text-center" style="font-size: 0.7rem;">Feedback</p>
@@ -225,7 +229,8 @@
 
                     <div class="col-4 col-md-12 div-org">
                         <div class="d-flex flex-column justify-content-center align-items-center">
-                            <button class="circle-button d-flex justify-content-center align-items-center">
+                            <button type="button" onclick="goToPage('faq.html')"
+                                class="circle-button d-flex justify-content-center align-items-center">
                                 <i class="fa-solid fa-clipboard-question offcanvascomp"></i>
                             </button>
                             <p class="text-center" style="font-size: 0.7rem;">FAQs</p>
@@ -244,7 +249,8 @@
 
                     <div class="col-4 col-md-12 div-org">
                         <div class="d-flex flex-column justify-content-center align-items-center">
-                            <button class="circle-button d-flex justify-content-center align-items-center">
+                            <button type="button" onclick="goToPage('events.html')"
+                                class="circle-button d-flex justify-content-center align-items-center">
                                 <i class="fa-solid fa-calendar-check offcanvascomp"></i>
                             </button>
                             <p class="text-center" style="font-size: 0.7rem;">Nearby Events</p>
@@ -257,6 +263,8 @@
     </div>
 
 
+
+
     <!-- Modal for store directory -->
     <div class="modal fade" id="carouselWMdodal" tabindex="-1" aria-labelledby="carouselWMdodalLabel"
         aria-hidden="true">
@@ -264,8 +272,7 @@
             <div class="modal-content position-relative">
                 <div class="pt-3 pb-1">
                     <h6 class="text-center fw-500 mb-0">Singapore Flyer Floormap</h6>
-                    <h6 id="levelHeading" class="text-center fw-bold p-0 mb-0 level-heading-transition">Level 1
-                    </h6>
+                    <h6 id="levelHeading" class="text-center fw-bold p-0 mb-0 level-heading-transition">Level 1</h6>
 
                 </div>
                 <div class="modal-body p-0 ">
@@ -281,13 +288,13 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../images/floormap1.png" class="d-block w-100" alt="...">
+                                <img src="images/floormap1.png" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="../images/floormap2.png" class="d-block w-100" alt="...">
+                                <img src="images/floormap2.png" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="../images/floormap3.png" class="d-block w-100" alt="...">
+                                <img src="images/floormap3.png" class="d-block w-100" alt="...">
                             </div>
                         </div>
                         <button id="carouselPrev" class="carousel-control-prev opacity-ofbtn" type="button"
@@ -299,8 +306,7 @@
                         </button>
                         <button id="carouselNext" class="carousel-control-next opacity-ofbtn" type="button"
                             data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="rounded-circle p-2  bg-for-carouselbtn" style="width:1.2rem;"
-                                style="width:1.2rem;">
+                            <span class="rounded-circle p-2 bg-for-carouselbtn" style="width:1.2rem;">
                                 <span class="carousel-control-next-icon width-ofbtn" aria-hidden="true"></span>
                             </span>
                             <span class="visually-hidden">Next</span>
@@ -312,36 +318,18 @@
         </div>
     </div>
 
+
+
+
     <script>
         function goToPage(url) {
             window.location.href = url;
         }
     </script>
 
-    <script>
-        document.getElementById('storeDirectoryBtn').addEventListener('click', function () {
-            var offcanvas = document.getElementById('offcanvasExample');
-            var modal = new bootstrap.Modal(document.getElementById('carouselWMdodal'));
-            // Close offcanvas
-            var offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
-            offcanvasInstance.hide();
-            // Open modal
-            modal.show();
-        });
-
-        document.getElementById('carouselWMdodal').addEventListener('hidden.bs.modal', function () {
-            // Remove any lingering backdrop elements
-            var backdrops = document.querySelectorAll('.modal-backdrop');
-            backdrops.forEach(function (backdrop) {
-                backdrop.parentNode.removeChild(backdrop);
-            });
-        });
-    </script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/offcanvas.js"></script>
-
     <script src="js/modalwcarousel.js"></script>
     <script src="js/toggle.js"></script>
 </body>

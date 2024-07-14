@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/toggle.css">
     <link rel="stylesheet" href="css/offcanvas.css">
     <link rel="stylesheet" href="css/modalwcarousel.css">
+    <link rel="stylesheet" href="css/imgForTopPanel.css">
     <style>
         .btmpanelbtn {
             background: white;
@@ -83,7 +84,8 @@
                                 class="d-flex px-3 py-2 align-items-center justify-content-between justify-content-sm-center gap-sm-2 ">
                                 <div class="d-flex flex-column ">
                                     <div style="font-size: 0.7rem;">Queue Status</div>
-                                    <img style="height: 1rem;" src="icons/icons/status-amber.png" alt="">
+                                    <div class="status-image-wrapper"> <img class="status-image"
+                                            src="../icons/icons/status-amber.png" alt=""></div>
                                 </div>
 
                                 <div class="language-options d-flex flex-row  p-1">
@@ -410,7 +412,8 @@
 
                     <div class="col-4 col-md-12 div-org">
                         <div class="d-flex flex-column justify-content-center align-items-center">
-                            <button class="circle-button d-flex justify-content-center align-items-center">
+                            <button type="button" onclick="goToPage('events.html')"
+                                class="circle-button d-flex justify-content-center align-items-center">
                                 <i class="fa-solid fa-calendar-check offcanvascomp"></i>
                             </button>
                             <p class="text-center" style="font-size: 0.7rem;">Nearby Events</p>

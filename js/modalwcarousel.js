@@ -28,3 +28,29 @@ carouselElement.addEventListener('slid.bs.carousel', function (event) {
 
 // Initialize carousel controls on page load
 updateCarouselControls();
+
+document.getElementById('storeDirectoryBtn').addEventListener('click', function () {
+    var offcanvas = document.getElementById('offcanvasExample');
+    var modalElement = document.getElementById('carouselWMdodal');
+    var modal = new bootstrap.Modal(modalElement);
+    // Close offcanvas
+    var offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
+    offcanvasInstance.hide();
+    // Open modal
+    modal.show();
+});
+
+document.getElementById('carouselWMdodal').addEventListener('hidden.bs.modal', function () {
+    // Remove any lingering backdrop elements
+    var backdrops = document.querySelectorAll('.modal-backdrop');
+    backdrops.forEach(function (backdrop) {
+        backdrop.parentNode.removeChild(backdrop);
+    });
+
+    // Dispose of the modal instance to reset its state
+    var modalElement = document.getElementById('carouselWMdodal');
+    var modalInstance = bootstrap.Modal.getInstance(modalElement);
+    if (modalInstance) {
+        modalInstance.dispose();
+    }
+});

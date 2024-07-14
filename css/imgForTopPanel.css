@@ -1,0 +1,12 @@
+.status-image-wrapper {
+    display: flex;
+    align-items: center;
+    /* Center the image vertically */
+    justify-content:flex-start;
+    /* Center the image horizontally */
+}
+
+.status-image {
+    height: 1rem;
+    width: auto;
+}

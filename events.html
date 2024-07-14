@@ -5,49 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/4ffc3dc033.js" crossorigin="anonymous"></script>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/toggle.css">
-    <link rel="stylesheet" href="css/scroll.css">
     <link rel="stylesheet" href="css/offcanvas.css">
-    <link rel="stylesheet" href="css/appDwnBtn.css">
+    <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/modalwcarousel.css">
-
-
+    <link rel="stylesheet" href="css/imgForTopPanel.css">
     <style>
-        .btmpanelbtn {
-            background: white;
-            border: 0;
-            outline: 0;
+        a {
+            text-decoration: none;
+            color: black;
         }
 
-        .small-div {
-            height: 5px;
-            width: 50px;
-            background-color: #acacac;
-            border-radius: 10px;
+        a:hover {
+            color: black;
         }
 
-        @media screen and (min-width:576px) {
-            .announceimg {
-                height: 20rem !important;
+        .card {
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1), 0 0 10px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .cardimages {
+            object-fit: cover;
+        }
+
+        .card-body div {
+            font-size: 0.8rem;
+        }
+
+        .card-body {
+            padding-bottom: 0.5rem;
+            padding-top: 0;
+        }
+
+        @media screen and (max-width:768px) {
+
+            .card-body {
+                padding-left: 0.5rem;
+                padding-right: 0;
+            }
+
+            .card-body h6 {
+                font-size: 0.6rem;
+                margin-bottom: 0.2rem;
+            }
+
+            .card-body>div {
+                font-size: 0.55rem;
+                letter-spacing: 0px;
+                word-spacing: 0.5px;
+                margin-bottom: 0 !important;
             }
         }
-    </style>
 
+        h6 {
+            margin-top: 0 !important;
+        }
+    </style>
 
 </head>
 
 <body>
+    <!--Top panel-->
 
-    <!--toppanel-->
-    <div class="sticky-top bg-light">
+    <div class="sticky-top bg-white">
         <div class="container mb-2">
             <!--toppanel-->
-            <div class="toppanel d-grid col-12 col-md-6 col-lg-7 col-xl-4  mx-auto  me-sm-0 p-0 sticky-top">
+            <div class="toppanel d-grid col-12 col-md-6 col-lg-7 col-xl-4 mx-auto me-sm-0 p-0 sticky-top">
                 <table class="float-end mt-3 ">
                     <tr>
                         <td class="first-td firstTdRightBorder" style="width:50%">
@@ -70,7 +96,8 @@
                                 class="d-flex px-3 py-2 align-items-center justify-content-between justify-content-sm-center gap-sm-2 ">
                                 <div class="d-flex flex-column ">
                                     <div style="font-size: 0.7rem;">Queue Status</div>
-                                    <img style="height: 1rem;" src="icons/icons/status-amber.png" alt="">
+                                    <div class="status-image-wrapper"> <img class="status-image"
+                                            src="../icons/icons/status-amber.png" alt=""></div>
                                 </div>
 
                                 <div class="language-options d-flex flex-row  p-1">
@@ -90,12 +117,145 @@
                 </table>
             </div>
         </div>
-        <div class="p-2 d-flex bg-white align-items-center">
-            <a href="homepage.html" class="text-decoration-none text-dark d-lg-none"><i
-                    class="fa-solid fa-arrow-left me-2"></i></a>
-            <h5 class="mb-0 text-primary text-center fw-bold flex-grow-1">Events</h5>
+        <!--Flash deals header with arrow btn-->
+        <div class="bg-light bg-gradient p-2 d-flex align-items-center">
+            <a href="homepage.html"><i class="fa-solid fa-arrow-left me-2 fs-4 text-dark d-lg-none"></i></a>
+            <h5 class="mb-0 text-primary text-center fw-bold flex-grow-1 ">Events</h5>
+        </div>
+
+    </div>
+    <!--Search Bar-->
+    <div class="container pt-3 pb-3">
+        <div class="row">
+            <div class="col-11 col-md-7 col-lg-5 col-xl-5 mx-auto ">
+                <div class="input-group me-md-0">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <span class="form-control-icon"><i class="fas fa-search"></i></span>
+                </div>
+            </div>
         </div>
     </div>
+
+
+    <!--Cards-->
+    <div class="container px-sm-5" style="padding-bottom:5rem;">
+        <div class="row g-3 g-lg-5 align-content-center justify-content-center">
+            <div class="col-12 col-md-8 col-xl-6">
+                <a href="flashdealindiv.html">
+                    <div class="card">
+                        <img src="images/exhibition1.png" class="card-img-top cardimages" alt="...">
+                        <div class="card-body py-1 d-flex align-items-center">
+                            <div>
+                                <h6 class="fw-bold">Opening Exclusive with ODF Gallery</h6>
+                                <div class="text-wrap mb-2">
+                                    Discover the wide selection of local and international brands awaiting you at ODF
+                                    Gallery
+                                </div>
+                                <div class="text-muted ms-1"><img src="/icons/icons/events.png" style="height:0.8rem"
+                                        alt=""> 01
+                                    Apr - 30
+                                    Apr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-8 col-xl-6">
+                <div class="card ">
+                    <img src="images/exhibition2.png" class="card-img-top cardimages" alt="...">
+                    <div class="card-body py-1 d-flex align-items-center">
+                        <div>
+                            <h6 class="fw-bold">Enhance your Formula 1 experience</h6>
+                            <div class="text-wrap mb-2">
+                                Capture the full view of the exciting race from a point of view with our Singapore Flyer
+                            </div>
+                            <div class="text-muted ms-1"><img src="icons/icons/events.png" style="height:0.8rem" alt="">
+                                01
+                                Apr - 30
+                                Apr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-xl-6">
+                <div class="card ">
+                    <img src="images/exhibition2.png" class="card-img-top cardimages" alt="...">
+                    <div class="card-body py-1 d-flex align-items-center">
+                        <div>
+                            <h6 class="fw-bold">Enhance your Formula 1 experience</h6>
+                            <div class="text-wrap mb-2">
+                                Capture the full view of the exciting race from a point of view with our Singapore Flyer
+                            </div>
+                            <div class="text-muted ms-1"><img src="icons/icons/events.png" style="height:0.8rem" alt="">
+                                01
+                                Apr - 30
+                                Apr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-xl-6">
+                <div class="card ">
+                    <img src="images/exhibition2.png" class="card-img-top cardimages" alt="...">
+                    <div class="card-body py-1 d-flex align-items-center">
+                        <div>
+                            <h6 class="fw-bold">Enhance your Formula 1 experience</h6>
+                            <div class="text-wrap mb-2">
+                                Capture the full view of the exciting race from a point of view with our Singapore Flyer
+                            </div>
+                            <div class="text-muted ms-1"><img src="icons/icons/events.png" style="height:0.8rem" alt="">
+                                01
+                                Apr - 30
+                                Apr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-xl-6">
+                <div class="card ">
+                    <img src="images/exhibition2.png" class="card-img-top cardimages" alt="...">
+                    <div class="card-body py-1 d-flex align-items-center">
+                        <div>
+                            <h6 class="fw-bold">Enhance your Formula 1 experience</h6>
+                            <div class="text-wrap mb-2">
+                                Capture the full view of the exciting race from a point of view with our Singapore Flyer
+                            </div>
+                            <div class="text-muted ms-1"><img src="icons/icons/events.png" style="height:0.8rem" alt="">
+                                01
+                                Apr - 30
+                                Apr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-xl-6">
+                <div class="card ">
+                    <img src="images/exhibition2.png" class="card-img-top cardimages" alt="...">
+                    <div class="card-body py-1 d-flex align-items-center">
+                        <div>
+                            <h6 class="fw-bold">Enhance your Formula 1 experience</h6>
+                            <div class="text-wrap mb-2">
+                                Capture the full view of the exciting race from a point of view with our Singapore Flyer
+                            </div>
+                            <div class="text-muted ms-1"><img src="icons/icons/events.png" style="height:0.8rem" alt="">
+                                01
+                                Apr - 30
+                                Apr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
 
 
 
@@ -132,9 +292,10 @@
     </div>
 
 
-    <!-- The Modal -->
-    <div class="modal fade" id="myModal" style="z-index:100000000">
-        <div class="modal-dialog modal-fullscreen-sm-down modal-fullscreen m-0">
+
+    <!-- The full size Modal for tickets -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-fullscreen modal-fullscreen-sm-down m-0">
             <div class="modal-content">
 
                 <!-- Modal Header -->
@@ -152,13 +313,12 @@
         </div>
     </div>
 
-
-
+    <!--Main Offcanvas in every page with 6 elements-->
     <!-- Offcanvas component -->
-    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"
-        style="z-index:100000000">
-        <div class="offcanvas-header mx-auto">
-            <div class="small-div"></div>
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header ">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas Example</h5>
+
         </div>
         <div class="offcanvas-body">
             <div class="container h-100">
@@ -168,7 +328,7 @@
                     <div class="col-4 col-md-12 div-org">
                         <div class="d-flex flex-column justify-content-center align-items-center">
                             <button class="circle-button d-flex justify-content-center align-items-center">
-                                <i class="fa-solid fa-wifi offcanvascomp"></i>
+                                <i class="fa-solid fa-wifi" style="color: #FEBE10;"></i>
                             </button>
                             <p class="text-center" style="font-size: 0.7rem;">Free WIFI</p>
                         </div>
@@ -178,7 +338,7 @@
                         <div class="d-flex flex-column justify-content-center align-items-center">
                             <button type="button" onclick="goToPage('carpark.html')"
                                 class="circle-button d-flex justify-content-center align-items-center">
-                                <i class="fa-solid fa-car offcanvascomp"></i>
+                                <i class="fa-solid fa-car" style="color: #FEBE10;"></i>
                             </button>
                             <p class="text-center" style="font-size: 0.7rem;">Carpark</p>
                         </div>
@@ -188,7 +348,7 @@
                         <div class="d-flex flex-column justify-content-center align-items-center">
                             <button type="button" onclick="goToPage('feedbacknew.html')"
                                 class="circle-button d-flex justify-content-center align-items-center">
-                                <i class="fa-solid fa-comments offcanvascomp"></i>
+                                <i class="fa-solid fa-comments" style="color: #FEBE10;"></i>
                             </button>
                             <p class="text-center" style="font-size: 0.7rem;">Feedback</p>
                         </div>
@@ -198,7 +358,7 @@
                         <div class="d-flex flex-column justify-content-center align-items-center">
                             <button type="button" onclick="goToPage('faq.html')"
                                 class="circle-button d-flex justify-content-center align-items-center">
-                                <i class="fa-solid fa-clipboard-question offcanvascomp"></i>
+                                <i class="fa-solid fa-clipboard-question" style="color: #FEBE10;"></i>
                             </button>
                             <p class="text-center" style="font-size: 0.7rem;">FAQs</p>
                         </div>
@@ -208,7 +368,7 @@
                         <div class="d-flex flex-column justify-content-center align-items-center">
                             <button class="circle-button d-flex justify-content-center align-items-center"
                                 data-bs-toggle="modal" data-bs-target="#carouselWMdodal" id="storeDirectoryBtn">
-                                <i class="fa-solid fa-map offcanvascomp"></i>
+                                <i class="fa-solid fa-map offcanvascomp" style="color: #FEBE10;"></i>
                             </button>
                             <p class="text-center" style="font-size: 0.7rem;">Store directory</p>
                         </div>
@@ -216,8 +376,9 @@
 
                     <div class="col-4 col-md-12 div-org">
                         <div class="d-flex flex-column justify-content-center align-items-center">
-                            <button class="circle-button d-flex justify-content-center align-items-center">
-                                <i class="fa-solid fa-calendar-check offcanvascomp"></i>
+                            <button type="button" onclick="goToPage('events.html')"
+                                class="circle-button d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-calendar-check" style="color: #FEBE10;"></i>
                             </button>
                             <p class="text-center" style="font-size: 0.7rem;">Nearby Events</p>
                         </div>
@@ -227,6 +388,7 @@
             </div>
         </div>
     </div>
+
 
 
     <!-- Modal for store directory -->
@@ -252,13 +414,13 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../images/floormap1.png" class="d-block w-100" alt="...">
+                                <img src="images/floormap1.png" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="../images/floormap2.png" class="d-block w-100" alt="...">
+                                <img src="images/floormap2.png" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="../images/floormap3.png" class="d-block w-100" alt="...">
+                                <img src="images/floormap3.png" class="d-block w-100" alt="...">
                             </div>
                         </div>
                         <button id="carouselPrev" class="carousel-control-prev opacity-ofbtn" type="button"
@@ -281,6 +443,37 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        // Use Bootstrap's event handling and methods to toggle offcanvas position
+        var offcanvasElement = document.getElementById('offcanvasExample');
+
+
+        function handleScreenSizeChange(mq) {
+            if (mq.matches) {
+                // Larger screens: Toggle to offcanvas at end
+                offcanvasElement.classList.remove('offcanvas-bottom');
+                offcanvasElement.classList.add('offcanvas-end', 'custom-offcanvas');
+            } else {
+                // Smaller screens: Toggle to offcanvas at start
+                offcanvasElement.classList.remove('offcanvas-end', 'custom-offcanvas');
+                offcanvasElement.classList.add('offcanvas-bottom');
+            }
+        }
+
+        // Initial check on page load
+        var mq = window.matchMedia('(min-width: 768px)');
+        handleScreenSizeChange(mq);
+
+        // Event listener for screen size change
+        mq.addListener(handleScreenSizeChange);
+    </script>
+
+
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/offcanvas.js"></script>
     <script src="js/toggle.js"></script>
@@ -290,38 +483,54 @@
         }
     </script>
     <script>
-        document.getElementById('storeDirectoryBtn').addEventListener('click', function () {
-            var offcanvas = document.getElementById('offcanvasExample');
-            var myDiv = document.getElementById('App');
-            var modal = new bootstrap.Modal(document.getElementById('carouselWMdodal'));
+        // Use Bootstrap's event handling and methods to toggle offcanvas position
+        var offcanvasElement = document.getElementById('offcanvasExample');
 
-            // Close offcanvas
-            var offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
-            offcanvasInstance.hide();
-            myDiv.style.display = 'none';
 
-            // Open modal
-            modal.show();
-        });
+        function handleScreenSizeChange(mq) {
+            if (mq.matches) {
+                // Larger screens: Toggle to offcanvas at end
+                offcanvasElement.classList.remove('offcanvas-bottom');
+                offcanvasElement.classList.add('offcanvas-end', 'custom-offcanvas');
+            } else {
+                // Smaller screens: Toggle to offcanvas at start
+                offcanvasElement.classList.remove('offcanvas-end', 'custom-offcanvas');
+                offcanvasElement.classList.add('offcanvas-bottom');
+            }
+        }
 
-        document.getElementById('carouselWMdodal').addEventListener('hidden.bs.modal', function () {
-            // Show the div again when the modal is closed
-            var myDiv = document.getElementById('App');
-            myDiv.style.display = 'block';
+        // Initial check on page load
+        var mq = window.matchMedia('(min-width: 768px)');
+        handleScreenSizeChange(mq);
 
-            // Remove any lingering backdrop elements
-            var backdrops = document.querySelectorAll('.modal-backdrop');
-            backdrops.forEach(function (backdrop) {
-                backdrop.parentNode.removeChild(backdrop);
+        // Event listener for screen size change
+        mq.addListener(handleScreenSizeChange);
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.card');
+            let maxHeight = 0;
+
+            cards.forEach(card => {
+                let cardHeight = card.offsetHeight;
+                if (cardHeight > maxHeight) {
+                    maxHeight = cardHeight;
+                }
+            });
+
+            cards.forEach(card => {
+                card.style.height = maxHeight + 'px';
             });
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+    <script src="js/scroll.js"></script>
     <script src="js/modalwcarousel.js"></script>
-
-
+    <script src="js/appDwnBtn.js"></script>
+    <script src="https://kit.fontawesome.com/4ffc3dc033.js" crossorigin="anonymous"></script>
 
 
 </body>

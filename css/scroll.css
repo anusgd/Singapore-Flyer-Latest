@@ -70,17 +70,14 @@
         }
         .card-body div{
             font-size:0.68rem;
-            overflow-y:hidden !important;
-            text-overflow:ellipsis !important;
+           
 
         }
 
         .card-body{
             padding-bottom: 0;
             padding-top: 0;
-            overflow:hidden !important;
-            text-overflow:ellipsis !important;
-            white-space: nowrap; 
+           
 
         }
 
