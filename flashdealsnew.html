@@ -69,6 +69,13 @@
                 height: 12.5rem;
             }
         }
+
+        .small-div {
+            height: 5px;
+            width: 50px;
+            background-color: #acacac;
+            border-radius: 10px;
+        }
     </style>
 
 </head>
@@ -124,7 +131,7 @@
         </div>
         <!--Flash deals header with arrow btn-->
         <div class="bg-light bg-gradient p-2 d-flex align-items-center">
-            <a href="homepage.html"><i class="fa-solid fa-arrow-left me-2 fs-4 text-dark d-lg-none"></i></a>
+            <a id="backButton"><i class="fa-solid fa-arrow-left me-2 fs-4 text-dark d-lg-none"></i></a>
             <h5 class="mb-0 text-primary text-center fw-bold flex-grow-1 ">Flash deals</h5>
         </div>
 
@@ -279,9 +286,8 @@
     <!--Main Offcanvas in every page with 6 elements-->
     <!-- Offcanvas component -->
     <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header ">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas Example</h5>
-
+        <div class="offcanvas-header mx-auto">
+            <div class="small-div"></div>
         </div>
         <div class="offcanvas-body  ">
             <div class="container h-100">
@@ -504,6 +510,7 @@
     <script src="js/modalwcarousel.js"></script>
     <script src="js/appDwnBtn.js"></script>
     <script src="https://kit.fontawesome.com/4ffc3dc033.js" crossorigin="anonymous"></script>
+    <script src="js/backButton.js"></script>
 
 
 </body>

@@ -105,7 +105,7 @@
             </div>
         </div>
         <div class="p-2 d-flex bg-white align-items-center">
-            <a href="homepage.html" class="text-decoration-none text-dark d-lg-none"><i
+            <a id="backButton" class="text-decoration-none text-dark d-lg-none"><i
                     class="fa-solid fa-arrow-left me-2"></i></a>
             <h5 class="mb-0 text-primary text-center fw-bold flex-grow-1">Announcements</h5>
         </div>
@@ -266,7 +266,8 @@
 
                     <div class="col-4 col-md-12 div-org">
                         <div class="d-flex flex-column justify-content-center align-items-center">
-                            <button class="circle-button d-flex justify-content-center align-items-center">
+                            <button type="button" onclick="goToPage('events.html')"
+                                class="circle-button d-flex justify-content-center align-items-center">
                                 <i class="fa-solid fa-calendar-check offcanvascomp"></i>
                             </button>
                             <p class="text-center" style="font-size: 0.7rem;">Nearby Events</p>
@@ -370,6 +371,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="js/modalwcarousel.js"></script>
+    <script src="js/backButton.js"></script>
 
 
 

@@ -43,11 +43,14 @@
             }
         }
 
-        body,
-        html {
-            padding: 0;
-            margin: 0;
-            width: 100vw;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: black;
         }
     </style>
 
@@ -133,17 +136,18 @@
             <a href="flashdealsnew.html" class="float-end text-decoration-none text-dark">See all</a>
         </div>
         <div class="scrolling-wrapper pt-3 pb-5 ">
-
-            <div class="card card-fl">
-                <img src="images/1for1deals.png" class="card-img-top cardimages" alt="...">
-                <div class="card-body">
-                    <h6 class="mt-2 fw-bold">1-for-1 Deals at Sky View Pavilion</h6>
-                    <div class="text-wrap mb-2 ">
-                        Dining just got even better with our exclusive 1-for-1 delas on selected dishes this month
+            <a href="flashdealindiv.html">
+                <div class="card card-fl">
+                    <img src="images/1for1deals.png" class="card-img-top cardimages" alt="...">
+                    <div class="card-body">
+                        <h6 class="mt-2 fw-bold">1-for-1 Deals at Sky View Pavilion</h6>
+                        <div class="text-wrap mb-2 ">
+                            Dining just got even better with our exclusive 1-for-1 delas on selected dishes this month
+                        </div>
+                        <div class="text-muted ">Valid: 01 Apr - 30 Apr</div>
                     </div>
-                    <div class="text-muted ">Valid: 01 Apr - 30 Apr</div>
                 </div>
-            </div>
+            </a>
             <div class="card card-fl">
                 <img src="images/20percoff.png" class="card-img-top cardimages" alt="...">
                 <div class="card-body">
@@ -203,7 +207,7 @@
         <!--Exhibitions-->
         <div class="d-flex justify-content-between align-items-center">
             <h5 class="float-start m-0 ms-2 ms-lg-3 text-primary fw-bold">Exhibitions</h5>
-            <a href="flashdeals.html" class="float-end text-decoration-none text-dark">See all</a>
+            <a href="events.html" class="float-end text-decoration-none text-dark">See all</a>
         </div>
         <div class="scrolling-wrapper pt-3 pb-5 ">
 
@@ -507,7 +511,8 @@
 
                     <div class="col-4 col-md-12 div-org">
                         <div class="d-flex flex-column justify-content-center align-items-center">
-                            <button class="circle-button d-flex justify-content-center align-items-center">
+                            <button type="button" onclick="goToPage('events.html')"
+                                class="circle-button d-flex justify-content-center align-items-center">
                                 <i class="fa-solid fa-calendar-check offcanvascomp"></i>
                             </button>
                             <p class="text-center" style="font-size: 0.7rem;">Nearby Events</p>
