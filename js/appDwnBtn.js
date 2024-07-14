@@ -3,7 +3,7 @@ function openPlayStore() {
 
     // Check if the user agent contains 'Android' to determine if it's a mobile device
     if (/android/i.test(userAgent)) {
-        var playStoreUrl = 'market://details?id=com.example.app'; // Replace with your app's package name
+        var playStoreUrl = 'market://details?id=com.instagram.android';
         window.location.href = playStoreUrl;
     } else {
         // For laptops and desktops, stay on the current page (or redirect as needed)
